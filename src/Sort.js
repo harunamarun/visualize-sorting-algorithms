@@ -4,6 +4,7 @@ class SortOfQuick {
   }
 
   sort() {
+    const his = [this.array.concat()];
     const recursionOfSort = (start = 0, end = this.array.length - 1) => {
       let left = start;
       let right = end;
@@ -25,6 +26,7 @@ class SortOfQuick {
         this.array[right] = temp;
         left++;
         right--;
+        his.push(this.array.concat());
       }
 
       if (start < left - 1) {
@@ -35,7 +37,7 @@ class SortOfQuick {
       }
     };
     recursionOfSort();
-    return this.array;
+    return his;
   }
 
   returnValue(value) {

@@ -14,7 +14,8 @@ describe("Sort", () => {
     expect(SortOfQuick.prototype.sort).to.be.a("function");
   });
   it("should sort numbers using sort method", () => {
-    expect(quick.sort()).to.deep.equal([-1, 10, 11, 11, 21, 23, 35]);
+    const his = quick.sort();
+    expect(his[his.length - 1]).to.deep.equal([-1, 10, 11, 11, 21, 23, 35]);
   });
   it("should be a function", () => {
     expect(SortOfQuick.prototype.returnValue).to.be.a("function");
